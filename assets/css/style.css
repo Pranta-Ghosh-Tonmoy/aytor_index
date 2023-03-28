@@ -1,0 +1,1131 @@
+/*
+Theme  Name: Aytor
+Version: 1.0.0
+Author: Aytor
+Description:
+
+===================
+Table of Content
+-----------------------
+1) Common CSS
+2) Navbar CSS
+3) Banner CSS
+4) Featured Product CSS
+*/
+
+
+
+
+
+/* --------------------------------
+      Common Section Css Start
+----------------------------------- */
+:root {
+  --primary-font: "Josefin Sans", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+  --primary-dark-color: #FF5645;
+  --primary-light-color: #FF6F61;
+  --primary-3d-color: #151A32;
+  --text-color: #11161E;
+  --common-white: #FFFFFF;
+  --common-black: #000000;
+  --paragraph-color: #444444;
+  --bg-dark-color: #F1F3F4;
+  --bg-light-color: #F1F1F1;
+  --A6AAB7: #A6AAB7;
+
+
+
+
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+span,
+small {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+.product {
+  border: 1px solid var(--bg-dark-color);
+  position: relative;
+  margin: 0 12px;
+}
+
+.product_thumb {
+  background: var(--bg-light-color);
+  padding: 43px 0;
+  width: 100%;
+  height: 310px;
+}
+
+.product .floating_tag {
+  background: var(--primary-dark-color);
+  color: var(--common-white);
+  position: absolute;
+  top: 52px;
+  left: 28px;
+  transform-origin: top left;
+  transform: rotate(-90deg);
+  padding: 10px 15px;
+  border-radius: 22px 0 0 22px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.product .product_action_btn {
+  position: absolute;
+  top: 44px;
+  right: 20px;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: .5s;
+}
+
+.product:hover .product_action_btn {
+  transform: scale(1);
+}
+
+.product .product_action_btn ul li {
+  margin-bottom: 10px;
+}
+
+.product .product_action_btn ul li a {
+  width: 36px;
+  height: 36px;
+  background: var(--common-white);
+  color: var(--primary-3d-color);
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+  transition: .4s;
+}
+
+.product .product_action_btn ul li a:hover {
+  background-color: var(--primary-dark-color);
+  color: var(--common-white);
+}
+
+
+/* --------------------------------
+      Common Section Css End
+----------------------------------- */
+
+
+
+
+
+
+/* --------------------------------
+      Navbar Section Css Start
+----------------------------------- */
+#nav .container .navigationbar ul li a {
+  transition: .4s;
+}
+
+#nav .container .navigationbar ul li:hover a {
+  color: var(--primary-dark-color);
+}
+
+#nav .container .navigationbar ul li a.active {
+  color: var(--primary-dark-color);
+}
+
+#nav .container .nav-icon-menu ul li {
+  text-align: center;
+  line-height: 40px;
+  transition: .4s;
+  width: 40px;
+  height: 40px;
+  color: var(--primary-3d-color);
+  font-weight: 800;
+  border: 1px solid transparent;
+}
+
+#nav .container .nav-icon-menu ul li:hover {
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px var(--paragraph-color);
+  cursor: pointer;
+  transform: scale(.90);
+  color: var(--primary-dark-color);
+}
+
+#nav .fa-magnifying-glass {
+  transform: rotate(90deg);
+  color: var(--primary-3d-color);
+}
+
+/* --------------------------------
+      Navbar Section Css End
+----------------------------------- */
+
+
+
+
+
+/* --------------------------------
+      Banner Section Css Start
+----------------------------------- */
+
+#banner {
+  padding: 0 80px;
+}
+
+#banner .banner_slider_item {
+  height: 800px;
+  background-size: cover;
+  background-position: center !important;
+  position: relative;
+  z-index: 1;
+}
+
+#banner .banner_slider_item h4 {
+  padding-top: 150px;
+  transition: 1s;
+}
+
+#banner .banner_slider_item.slick-active h4 {
+  padding-top: 0;
+}
+
+#banner .banner_slider_item::after {
+  content: '';
+  inset: 0;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(2, 5, 19, 0.7) 0%, rgba(2, 4, 17, 0.617485) 21.81%, rgba(1, 4, 15, 0.548445) 37.92%, rgba(1, 3, 13, 0.48336) 50.29%, rgba(0, 0, 0, 0) 100%);
+  z-index: -1;
+}
+
+#banner .banner_slider_item h4 {
+  color: var(--common-white);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#banner .banner_slider_item h1 {
+  color: var(--common-white);
+  font-weight: 700;
+  font-size: 64px;
+  padding: 25px 0px;
+}
+
+#banner .banner_slider_item p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--common-white);
+  padding-bottom: 40px;
+}
+
+#banner .banner_slider_item a {
+  color: var(--common-white);
+  font-weight: 600;
+  font-size: 18px;
+  background-color: var(--primary-light-color);
+  padding: 18px 35px;
+  transition: .4s;
+}
+
+#banner .banner_slider_item a:hover {
+  color: var(--primary-light-color);
+  background-color: var(--common-white);
+}
+
+#banner .banner_slider .banner_slider_dots {
+  position: absolute;
+  bottom: 210px;
+  left: 75px;
+}
+
+#banner .banner_slider .banner_slider_dots li {
+  line-height: 0;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#banner .banner_slider .banner_slider_dots li button {
+  background: none;
+  border: none;
+  font-size: 0;
+  width: 10px;
+  height: 6px;
+  background: var(--common-white);
+  border-radius: 5px;
+  transition: .5s linear;
+}
+
+#banner .banner_slider .banner_slider_dots li.slick-active button {
+  width: 26px;
+  background-color: var(--primary-dark-color);
+}
+
+
+/* --------------------------------
+      Banner Section Css End
+----------------------------------- */
+
+
+
+
+
+/* --------------------------------
+    Feature product Section Css Start
+----------------------------------- */
+#featured_product {
+  padding: 80px 0;
+}
+
+#featured_product .f_product {
+  position: relative;
+}
+
+
+#featured_product .f_product .overlay .banner_overlay_info h2 {
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--common-white);
+}
+
+#featured_product .f_product .overlay .banner_overlay_info a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--common-white);
+}
+
+#featured_product .f_product .overlay {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  top: 20px;
+  bottom: 20px;
+  background: rgba(1, 3, 13, 0.4834);
+  text-align: center;
+  transition: 0.6s;
+  border-radius: 50%;
+  transform: scale(0) skew(-90deg) translate(-250px);
+  transform-origin: center top;
+}
+
+#featured_product .f_product:hover .overlay {
+  border-radius: 0;
+  transform: scale(1) skew(0);
+}
+
+/* --------------------------------
+    Feature product Section Css End
+----------------------------------- */
+
+
+
+
+
+
+
+/* --------------------------------
+  Product Slider Section Css Start
+----------------------------------- */
+.product_slider_icon_left {
+  text-align: center;
+  width: 30px;
+  height: 50px;
+  background: #151A32;
+  opacity: 0.5;
+  color: var(--common-white);
+  line-height: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.product_slider_icon_right {
+  text-align: center;
+  width: 30px;
+  height: 50px;
+  background: #151A32;
+  opacity: 0.5;
+  color: var(--common-white);
+  line-height: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+/* --------------------------------
+  Product Slider Section Css End
+----------------------------------- */
+
+
+/* --------------------------------
+      Offer Section Css Start
+----------------------------------- */
+#offer {
+  background-image: url(./../images/discount_bg_1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 524px;
+  margin-top: 100px;
+}
+
+#offer h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: var(--common-white);
+  padding-top: 10px;
+}
+
+#offer P {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--common-white);
+  padding-bottom: 30px;
+}
+
+#offer button {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: var(--common-white);
+  width: 180px;
+  height: 56px;
+  background: none;
+  border: 1px solid var(--common-white);
+  margin-left: 12px;
+  transition: .4s;
+}
+
+#offer button:hover {
+  background: var(--common-white);
+  color: var(--paragraph-color);
+  transform: scale(.95);
+}
+
+/* --------------------------------
+    Offer Section Css End
+----------------------------------- */
+
+/* --------------------------------
+    Best Seller Section Css Start
+----------------------------------- */
+#new .best_seller {
+  padding: 0;
+  margin: -12px -12px 35px -12px;
+}
+
+.Best_-seller .container {
+  padding: 0;
+}
+
+#new .best_seller .floating_tag {
+  top: 63px;
+}
+
+#new .container .row .product_info ins {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--paragraph-color);
+}
+
+#new .container .row .product_info del {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #BDBDBD;
+}
+
+#new .container .row .product_info h6 a {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #11161E;
+}
+
+#new .container .row .product_info h6 {
+  padding: 5px 0 11px 0;
+}
+
+#new .container .row .product_info i {
+  margin-bottom: 26px;
+}
+
+#new .container .row>h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: var(--text-color);
+  padding: 100px 0 36px 0;
+}
+
+#new .container .row .product_thumb {
+  margin-bottom: 24px;
+}
+
+/* --------------------------------
+    Best Seller Section Css End
+----------------------------------- */
+
+/* --------------------------------
+      Deals Section Css Start
+----------------------------------- */
+#deals {
+  text-align: center;
+  padding: 80px 0;
+}
+
+#deals .container {
+  box-shadow: 0px 0px 70px rgba(21, 26, 50, 0.08);
+}
+
+#deals .container .row #deals_countdown {
+  width: 524px;
+  background: var(--common-white);
+  box-shadow: 0px 0px 10px rgba(21, 26, 50, 0.1);
+  border-radius: 90px;
+}
+
+#deals h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+#deals .container .row span {
+  color: var(--primary-dark-color);
+  font-size: 80px;
+}
+
+#deals .container .deals_countdown_item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+#deals .container .deals_countdown_item p {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: var(--paragraph-color);
+}
+
+#deals .inner_deal_section {
+  background-color: #a6aab7;
+  padding: 35px 0 131px 40px;
+}
+
+#deals .inner_deal_section h6 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #11161E;
+}
+
+#deals .inner_deal_section h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: #11161E;
+  padding: 10px 0 16px 0;
+}
+
+#deals .inner_deal_section p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #444444;
+  margin: 0px 0 19px 0;
+}
+
+#deals .inner_deal_section ins {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #11161E;
+  text-decoration: none;
+}
+
+#deals .inner_deal_section del {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #444444;
+  margin: 19px 0 30px 0;
+}
+
+#deals .inner_deal_section button {
+  width: 160px;
+  height: 56px;
+  background: #151A32;
+}
+
+#deals .inner_deal_section button p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+
+/* --------------------------------
+      Deals Section Css End
+----------------------------------- */
+
+
+
+
+
+
+
+
+/* --------------------------------
+    Product Video Section Css Start
+----------------------------------- */
+#product_video {
+  margin: 100px 0px;
+  position: relative;
+}
+
+#product_video {
+  background-color: var(--bg-dark-color);
+}
+
+#product_video .container .content {
+  padding: 100px 100px 100px 0;
+}
+
+#product_video .container .content h4 {
+  font-size: 16px;
+  color: var(--paragraph-color);
+}
+
+#product_video .container .content h2 {
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 36px;
+  ;
+  padding-top: 20px;
+  padding-right: 35px;
+}
+
+#product_video .container .content p {
+  font-size: 16px;
+  color: var(--paragraph-color);
+  text-align: justify;
+  padding: 35px 0px 30px 0px;
+}
+
+#product_video .container .content a {
+  background-color: var(--primary-dark-color);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--common-white);
+  padding: 14px 25px;
+  transition: .4s;
+}
+
+#product_video .container .content a:hover{
+  background-color: var(--primary-3d-color);
+  transform: scale(.95);
+}
+
+#product_video .container .row .video_part {
+  background-image: url(./../images/SpecialOffer_bg.jpg);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+#product_video .container .row .video_part a i {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  background: var(--common-white);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  align-items: center;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+#product_video .container .row .video_part a i::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  /* background: var(--primary-3d-color); */
+  z-index: -99;
+}
+
+
+/* --------------------------------
+    Product Video Section Css End
+----------------------------------- */
+
+
+
+
+
+
+
+/* --------------------------------
+      Promotion Section Css Start
+----------------------------------- */
+#promotion{
+  margin: 100px 0 0 0 ;
+}
+#promotion .promotion_section{
+  position: relative;
+  margin-bottom: -55px;
+  z-index: 9;
+}
+#promotion .promotion_content{
+  box-shadow: 0px 5px 14px rgba(17,22,30,0.08);
+  padding: 20px 30px;
+  border-right: 2px solid var(--bg-dark-color);
+}
+#promotion .promotion_content:last-child{
+  border: none;
+}
+#promotion .promotion_content .img{
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  background-color: var(--primary-light-color);
+  text-align: center;
+}
+#promotion .promotion_content .img h5{
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+#promotion .promotion_content .img p{
+  font-size: 16px;
+  color: var(--paragraph-color);
+  padding-top: 12px;
+}
+
+
+/* --------------------------------
+      Promotion Section Css End
+----------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------
+      Main Footer Section Css Start
+----------------------------------- */
+/* Footer Section CSS Start */
+#footer {
+  background-color: #000000;
+  position: relative;
+  z-index: ;
+}
+
+#footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #11161E;
+  opacity: .8;
+  z-index: -1;
+}
+
+#footer .head {
+  padding: 115px 0px 70px 0;
+  border-bottom: 1px solid var(--primary-3d-color);
+}
+
+#footer .head .social_icon i {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--common-white);
+  font-size: 24px;
+  color: var(--paragraph-color);
+  margin-right: 10px;
+  transition: .4s;
+}
+
+#footer .head .social_icon i:hover {
+  background-color: var(--primary-dark-color);
+  color: var(--common-white);
+  transform: scale(1.1);
+}
+
+#footer .footer_main .footer_account {
+  padding-top: 58px;
+}
+
+#footer .footer_main .footer_account .content h2 {
+  font-size: 24px;
+  color: var(--common-white);
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+#footer .footer_main .footer_account .content a {
+  display: block;
+  color: var(--common-white);
+  font-size: 16px;
+  padding-bottom: 7px;
+  transition: .67s;
+}
+
+#footer .footer_main .footer_account .content a:hover {
+  transform: translateX(25px);
+  color: var(--primary-light-color);
+}
+
+#footer .footer_main .footer_account .content .date p,
+#footer .footer_main .footer_account .content .time p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--common-white);
+  padding-bottom: 1px;
+}
+
+#footer .footer_main .footer_account .contact_us h2 {
+  font-size: 24px;
+  color: var(--common-white);
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+#footer .footer_main .footer_account .contact_us .contact_item i {
+  color: var(--primary-dark-color);
+}
+
+#footer .footer_main .footer_account .contact_us .contact_item a {
+  font-size: 16px;
+  color: var(--common-white);
+}
+
+#footer .footer_main .footer_account .news h2 {
+  font-size: 24px;
+  color: var(--common-white);
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+#footer .footer_main .footer_account .news p {
+  color: var(--common-white);
+  font-size: 14px;
+  padding-bottom: 25px;
+  line-height: 28px;
+}
+
+#footer .footer_main .footer_account .news .input_sectioninput,
+#footer .footer_main .footer_account .news .input_section button {
+  padding: 20px;
+  border: none;
+}
+
+#footer .footer_main .footer_account .news .input_section button {
+  border-radius: 0 10px 10px 0;
+  transition: 0.6s;
+  background-color: var(--primary-light-color);
+  color: var(--common-white);
+}
+
+#footer .footer_main .footer_account .news .input_section button:hover {
+  background-color: var(--primary-dark-color);
+  color: var(--common-black);
+}
+
+/* // Footer Section CSS End */
+
+/* --------------------------------
+      Main Footer Section Css End
+----------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------
+      Sub_banner Section Css Start
+----------------------------------- */
+#sub_banner {
+  background-image: url(./../images/secondary_banner_img.jpg);
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+#sub_banner .container div h2 {
+  color: var(--common-white);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+#sub_banner .container div p {
+  color: var(--common-white);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* --------------------------------
+      Sub_banner Section Css End
+----------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------
+      Sub_footer Section Css Start
+----------------------------------- */
+#sub_footer {
+  background-color: var(--bg-light-color);
+  position: relative;
+  z-index: 9;
+  margin-top: 100px;
+  transition: .5s;
+}
+
+#sub_footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-dark-color);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+#sub_footer .footer_main {
+  padding: 80px 0px;
+}
+
+#sub_footer .head {
+  padding: 70px 0px;
+  border-bottom: 1px solid var(--primary-3d-color);
+}
+
+#sub_footer .footer_main .head .head_info h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: var(--text-color);
+}
+
+#sub_footer .footer_main .head .head_info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--paragraph-color);
+}
+
+#sub_footer .footer_main .head .input_sectioninput,
+#sub_footer .footer_main .head .input_section button {
+  padding: 20px;
+  border: none;
+}
+
+#sub_footer .footer_main .head .input_section button {
+  background: var(--primary-light-color);
+  color: var(--common-white);
+  border-radius: 0 10px 10px 0;
+  transition: 0.6s;
+}
+
+#sub_footer .footer_main .head .input_section button:hover {
+  background: var(--primary-dark-color);
+  color: var(--common-black);
+}
+
+#sub_footer .footer_main .footer_account {
+  padding-top: 58px;
+}
+
+#sub_footer .footer_main .footer_account .footer_account_img {
+  padding-bottom: 10px;
+}
+
+#sub_footer .footer_main .footer_account .footer_account_info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--paragraph-color);
+  padding-bottom: 20px;
+}
+
+#sub_footer .footer_main .footer_account .social_icon_1 i {
+  padding-right: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.67s;
+}
+
+#sub_footer .footer_main .footer_account .social_icon_1 i:hover {
+  color: var(--primary-dark-color);
+}
+
+#sub_footer .footer_main .footer_account .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--common-black);
+  padding-bottom: 20px;
+}
+
+#sub_footer .footer_main .footer_account .content a {
+  display: block;
+  color: var(--common-black);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  padding-bottom: 7px;
+  transition: 0.67s;
+}
+
+#sub_footer .footer_main .footer_account .content a:hover {
+  color: var(--primary-light-color);
+}
+
+#sub_footer .footer_main .footer_account .contact_us h2 {
+  font-size: 24px;
+  color: var(--common-black);
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+#sub_footer .footer_main .footer_account .contact_us .contact_item i {
+  color: var(--primary-light-color);
+}
+
+#sub_footer .footer_main .footer_account .contact_us .contact_item a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--common-black);
+}
+
+#sub_footer .footer_main .footer_account .news .input_sectioninput,
+#sub_footer .footer_main .footer_account .news .input_section button {
+  padding: 20px;
+  border: none;
+}
+
+#sub_footer .last_container {
+  border-top: 1px solid var(--primary-3d-color);
+  padding: 25px 0;
+}
+
+#sub_footer:hover {
+  box-shadow: 5px 5px 15px var(--common-black);
+}
+
+#sub_footer .last_container .sec_footer div p {
+  color: var(--paragraph-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  z-index: 9;
+}
+
+/* --------------------------------
+      Sub_footer Section Css End
+----------------------------------- */
